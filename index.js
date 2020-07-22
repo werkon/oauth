@@ -1,8 +1,10 @@
 
 const express = require('express')
 const app = express()
- 
-app.get('/', function (req, res) {
+
+app.use('/', express.static('preact'));
+
+app.get('/*', function (req, res) {
   res.send('Hello World')
 })
  
